@@ -30,10 +30,9 @@ export default function Header({ userId, docId, photoStorageName, page }) {
   };
 
   const handleDelete = () => {
-    console.log(docId);
     deletePostById(docId, photoStorageName);
     setTimeout(function () {
-      window.location.reload();
+      history.push("/");
     }, 500);
   };
 

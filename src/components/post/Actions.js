@@ -28,8 +28,7 @@ export default function Actions({
           ? FieldValue.arrayRemove(user.uid)
           : FieldValue.arrayUnion(user.uid),
       });
-    console.log(userInfo.docId);
-    console.log(docId);
+
     await firebase
       .firestore()
       .collection("users")

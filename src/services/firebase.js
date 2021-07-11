@@ -235,9 +235,7 @@ export async function updateUserAvatar(userInfo, image, fileName) {
   // add image to firestore storage
   const storageRef = firebase.storage().ref();
   const fileRef = storageRef.child(newImageName);
-  fileRef.putString(image, "data_url").then(() => {
-    console.log("uploaded file", newImageName);
-  });
+  fileRef.putString(image, "data_url");
 
   // Create a reference to the file to delete
   var deleteRef = storageRef.child(`${oldImageName}`);
@@ -318,13 +316,8 @@ export async function deletePostById(docId, photoStorageName) {
     .doc(docId)
     .get();
 
-  console.log(photoToDeleteInfo);
-  console.log(photoToDeleteInfo.data());
   const comments = await photoToDeleteInfo.data().comments;
   const likes = await photoToDeleteInfo.data().likes;
-
-  console.log("comments", comments);
-  console.log("likes", likes);
 
   // removes all likes for this post in the users collection.
   if (likes !== undefined) {
@@ -337,7 +330,6 @@ export async function deletePostById(docId, photoStorageName) {
         .update({
           likes: FieldValue.arrayRemove(docId),
         });
-      console.log("2");
     }
   }
 
@@ -352,7 +344,6 @@ export async function deletePostById(docId, photoStorageName) {
         .get();
 
       userToUpdateComments = userToUpdateComments.data();
-      console.log(userToUpdateComments);
 
       const userFilteredCommentsArray = userToUpdateComments.comments.filter(
         (p) => p.commentId !== commentId
@@ -531,7 +522,6 @@ export async function deleteProfile(userInfo) {
   }
 
   // fetch users photos for deletion
-  console.log("delete: " + userId);
   let userPhotos = await firebase
     .firestore()
     .collection("photos")
@@ -542,8 +532,6 @@ export async function deleteProfile(userInfo) {
     ...item.data(),
     docId: item.id,
   }));
-
-  console.log(userPhotos);
 
   // loop through userPhotos and delete from storage and firestore
   for (let i = 0; i < userPhotos.length; i++) {

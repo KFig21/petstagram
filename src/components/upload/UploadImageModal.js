@@ -11,7 +11,6 @@ export default function UploadImageModal({ type }) {
 
   const initialUploadHandler = (e) => {
     const file = e.target.files[0];
-    console.log("file", file);
     const fileURL = URL.createObjectURL(file);
     setFileName(file.name);
     setSelectedImage(fileURL);
@@ -109,47 +108,5 @@ export default function UploadImageModal({ type }) {
         loading... (possibly)
       </p>
     </div>
-
-    // old module
-
-    // <div className="flex items-center justify-center w-full">
-    //   {!finishedEditing ? (
-    //     <div className="p-24 shadow-lg outline-none">
-    //       <label>
-    //         <div className="flex items-center justify-center ">
-    //           <img
-    //             src={newPostIcon}
-    //             alt="choose a file to post"
-    //             className="w-32 cursor-pointer"
-    //           />
-    //         </div>
-    //         <input
-    //           style={{ display: "none" }}
-    //           type="file"
-    //           name="file"
-    //           accept="image/*"
-    //           onChange={initialUploadHandler}
-    //         />
-    //         <div className="flex items-end justify-evenly bg-none font-semibold cursor-pointer outline-none p-4">
-    //           Choose image to upload
-    //         </div>
-    //       </label>
-    //       {selectedImage && !finishedEditing && editingImage && (
-    //         <ImageCropper
-    //           selectedImage={selectedImage}
-    //           handleImage={handleImage}
-    //           handleEditing={handleEditing}
-    //           handleFinishEditing={handleFinishEditing}
-    //         />
-    //       )}
-    //     </div>
-    //   ) : (
-    //     <FinalizePost
-    //       selectedImage={selectedImage}
-    //       handleFinishEditing={handleFinishEditing}
-    //       fileName={fileName}
-    //     />
-    //   )}
-    // </div>
   );
 }

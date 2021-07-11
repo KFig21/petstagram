@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Route, Redirect } from "react-router-dom";
+import * as ROUTES from "../constants/routes";
 
 export default function IsUserLoggedIn({
   user,
@@ -24,6 +25,8 @@ export default function IsUserLoggedIn({
               }}
             />
           );
+        } else {
+          return <Redirect to={ROUTES.LOGIN} />;
         }
 
         return null;

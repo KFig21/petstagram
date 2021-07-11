@@ -6,6 +6,7 @@ import * as ROUTES from "../constants/routes";
 import useUser from "../hooks/use-user";
 import newPostIcon from "../assets/newPost.png";
 import { useHistory } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 export default function Header() {
   const { firebase } = useContext(FirebaseContext);
@@ -21,7 +22,7 @@ export default function Header() {
             <h1 className="flex justify-center w-full">
               <Link to={ROUTES.DASHBOARD} aria-label="instagram header">
                 <img
-                  src="/images/logo.png"
+                  src={logo}
                   alt="instagram header"
                   className="mt-2 w-6/12"
                 />

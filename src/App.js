@@ -51,7 +51,7 @@ function App() {
             {/* post */}
             <Route path={ROUTES.POST} component={Post} />
             {/* not-found */}
-            <Route component={NotFound} />
+            <Route user={user} component={NotFound} />
           </Switch>
         </Suspense>
       </Router>
