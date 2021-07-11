@@ -18,7 +18,7 @@ const UploadPost = lazy(() => import("./pages/UploadPost"));
 function App() {
   const { user } = useAuthListener();
   return (
-    <UserContext.Provider value={{ user }}>
+    <UserContext.Provider basename="/instagram_clone" value={{ user }}>
       <Router>
         <Suspense fallback={<p>loading...</p>}>
           <Switch>

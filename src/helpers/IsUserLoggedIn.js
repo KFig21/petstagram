@@ -28,8 +28,6 @@ export default function IsUserLoggedIn({
         } else {
           return <Redirect to={ROUTES.LOGIN} />;
         }
-
-        return null;
       }}
     />
   );
