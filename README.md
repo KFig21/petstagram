@@ -9,15 +9,17 @@
 - The accuracy of the UI re-creaction
 - Use of Tailwind CSS
 - Fully functional capabilities:
--   Create a profile
--   Upload a profile picture, with the ability to crop
--   Post a picture, with the ability to crop
--   Like/Unlike pictures
--   Comment on pictures
--   Follow/Unfollow other users
--   Delete pictures posted
--   Delete comments posted
--   Delete profile
+<ul>
+  -   <li>Create a profile</li>
+  -   <li>Upload a profile picture, with the ability to crop</li>
+  -   <li>Post a picture, with the ability to crop</li>
+  -   <li>Like/Unlike pictures</li>
+  -   <li>Comment on pictures</li>
+  -   <li>Follow/Unfollow other users</li>
+  -   <li>Delete pictures posted</li>
+  -   <li>Delete comments posted</li>
+  -   <li>Delete profile</li>
+</ul>
 
 <h3> Things I need guidance with: </h3>
 
