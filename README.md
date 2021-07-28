@@ -1,5 +1,6 @@
 # instagram_clone
 
+- <a href="https://kfig21.github.io/instagram_clone/" target="_blank" rel="noopener noreferrer">View the project here!</a>
 - Final project for The Odin Project JavaScript curriculum
 - Re-create a social media platform
 - Made with the React JS Library, Tailwind CSS, and Firebase
