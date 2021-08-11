@@ -75,27 +75,12 @@ export default function ProfileHeader({
   }, [userInfo.username, profileUserId]);
 
   return (
-    <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg mt-6 pb-6 border-b border-gray-primary ">
+    <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg mt-6 pb-6 border-b border-gray-primary relative">
       {/* delete profile */}
-      <div className="flex" style={{ position: "absolute", left: "82%" }}>
-        {loggedInUsersProfile &&
-          userInfo.userId !==
-            "i6isWMwVjqaouBIqqSERS7jCnyN2" /* test account cant be deleted */ && (
-            <div
-              title={deletePostButton ? "cancel delete" : "delete your profile"}
-              onClick={handleX}
-            >
-              <p
-                className={`font-bold text-4xl hover:text-red-primary mb-2 cursor-pointer duration-150 ${
-                  deletePostButton
-                    ? `hover:text-green-primary`
-                    : `hover:text-red-primary`
-                }`}
-              >
-                ×
-              </p>
-            </div>
-          )}
+      <div
+        className="flex justify-center absolute h-16"
+        style={{ top: "-10px", right: "5px" }}
+      >
         {deletePostButton && (
           <button
             onClick={handleDelete}
@@ -105,6 +90,24 @@ export default function ProfileHeader({
             delete?
           </button>
         )}
+        {loggedInUsersProfile &&
+          userInfo.userId !==
+            "i6isWMwVjqaouBIqqSERS7jCnyN2" /* test account cant be deleted */ && (
+            <div
+              title={deletePostButton ? "cancel delete" : "delete your profile"}
+              onClick={handleX}
+            >
+              <p
+                className={`font-bold text-4xl  hover:text-red-primary cursor-pointer duration-150 ${
+                  deletePostButton
+                    ? `hover:text-green-primary`
+                    : `hover:text-red-primary`
+                }`}
+              >
+                ×
+              </p>
+            </div>
+          )}
       </div>
       <div className="container flex justify-center relative group h-28 w-28 lg:h-40 lg:w-40 m-auto ml-3 lg:ml-0">
         <img
