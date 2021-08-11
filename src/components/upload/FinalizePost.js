@@ -40,10 +40,10 @@ export default function FinalizePost({
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-full justify-center ">
+    <div className="flex flex-col items-center w-full  justify-center ">
       {userInfo.username === user.displayName && (
         <>
-          <div className="rounded col-span-4 border border-gray-primary bg-white">
+          <div className="rounded col-span-4 border border-gray-primary bg-white my-32">
             <Header userId={userInfo.userId} page="edit" />
             <div className="flex items-center justify-center outline-none h-full max-w-sm max-h-sm">
               <img
@@ -53,7 +53,7 @@ export default function FinalizePost({
               />
             </div>
             {type === "post" && (
-              <form className="flex flex-row place-items-center justify-evenly h-auto">
+              <form className="flex flex-row place-items-center justify-evenly h-auto ">
                 <textarea
                   className="outline-none w-full p-2"
                   placeholder={"Write a caption..."}
