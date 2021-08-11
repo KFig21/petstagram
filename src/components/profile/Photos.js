@@ -11,8 +11,8 @@ export default function Photos({ photos }) {
           <>
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -21,8 +21,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -31,8 +31,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -41,8 +41,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -51,8 +51,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -61,8 +61,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -71,8 +71,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -81,8 +81,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -91,8 +91,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -101,8 +101,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -111,8 +111,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
@@ -121,8 +121,8 @@ export default function Photos({ photos }) {
             />
             <Skeleton
               count={1}
-              width={`30vw`}
-              height={`30vw`}
+              width={`32vw`}
+              height={`32vw`}
               style={{
                 maxHeight: "320px",
                 maxWidth: "320px",
