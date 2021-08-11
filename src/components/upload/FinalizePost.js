@@ -64,7 +64,7 @@ export default function FinalizePost({
               </form>
             )}
           </div>
-          <div className="h-16 mb-12 lg:mb-0 bg-white border-t border-b border-gray-primary absolute inset-x-0 bottom-0 justify-center">
+          <div className="h-16 mb-12 lg:mb-0 bg-white border-t border-b border-gray-primary fixed bottom-0 z-50 w-screen inset-x-0 justify-center">
             <div className="flex w-3/5 h-full items-center justify-around m-auto">
               <button
                 className="bg-blue-primary font-bold text-sm rounded text-white w-20 h-8"
