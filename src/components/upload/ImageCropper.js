@@ -40,7 +40,7 @@ export default function ImageCropper({
 
   return (
     <>
-      <div className="border border-gray-primary mt-12 image-cropper">
+      <div className="border border-gray-primary mt-6 lg:mt-12 image-cropper">
         <Cropper
           image={selectedImage}
           crop={crop}
@@ -52,7 +52,7 @@ export default function ImageCropper({
         ></Cropper>
       </div>
 
-      <div className="w-full mt-5 flex flex-col justify-center items-center">
+      <div className="w-full mt-5 mb-16 flex flex-col justify-center items-center">
         <input
           type="range"
           value={zoom}

@@ -40,10 +40,10 @@ export default function FinalizePost({
   };
 
   return (
-    <div className="flex flex-col items-center w-full  justify-center ">
+    <div className="flex flex-col items-center w-full lg:h-full justify-center ">
       {userInfo.username === user.displayName && (
         <>
-          <div className="rounded col-span-4 border border-gray-primary bg-white my-32">
+          <div className="rounded col-span-4 border border-gray-primary bg-white mt-24 mb-32 lg:my-auto">
             <Header userId={userInfo.userId} page="edit" />
             <div className="flex items-center justify-center outline-none h-full max-w-sm max-h-sm">
               <img
