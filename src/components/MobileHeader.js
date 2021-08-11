@@ -3,22 +3,19 @@ import { Link } from "react-router-dom";
 import FirebaseContext from "../context/firebase";
 import UserContext from "../context/user";
 import * as ROUTES from "../constants/routes";
-import useUser from "../hooks/use-user";
-import newPostIcon from "../assets/newPost.png";
 import { useHistory } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 export default function Header() {
   const { firebase } = useContext(FirebaseContext);
   const { user } = useContext(UserContext);
-  const { userInfo } = useUser();
   const history = useHistory();
 
   return (
-    <header className="h-16 bg-white border-b border-gray-primary sticky top-0 z-50">
+    <header className="h-16 bg-white border-b border-gray-primary sticky top-0 z-50 mobile-header relative">
       <div className="container mx-auto max-w-screen-lg h-full">
-        <div className="flex justify-between h-full pr-5 pl-5">
-          <div className="text-gray-700 text-center flex  items-center align-items cursor-pointer">
+        <div className="flex justify-end h-full pr-5 pl-5">
+          <div className="text-gray-700 text-center flex  items-center align-items cursor-pointer absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <h1 className="flex justify-center w-full">
               <Link to={ROUTES.DASHBOARD} aria-label="instagram header">
                 <img src={logo} alt="instagram header" className="mt-2 w-28" />
@@ -28,36 +25,6 @@ export default function Header() {
           <div className="text-gray-700 text-center flex flex-none items-center align-items">
             {user ? (
               <>
-                <Link
-                  to={{
-                    pathname: `${ROUTES.UPLOAD_POST}`,
-                    state: { type: "post" },
-                  }}
-                  aria-label="upload post"
-                >
-                  <img
-                    src={newPostIcon}
-                    alt="add post"
-                    className="w-8 mr-4 lg:mr-6 cursor-pointer"
-                  />
-                </Link>
-                <Link to={ROUTES.DASHBOARD} aria-label="timeline">
-                  <svg
-                    className="w-8 mr-4 lg:mr-6 text-black-light cursor-pointer"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                    />
-                    <title>Timeline</title>
-                  </svg>
-                </Link>
                 <button
                   type="button"
                   title="Sign-out"
@@ -70,7 +37,7 @@ export default function Header() {
                   }}
                 >
                   <svg
-                    className="w-8 mr-4 lg:mr-6 text-black-light cursor-pointer"
+                    className="w-8  text-black-light cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -84,16 +51,6 @@ export default function Header() {
                     />
                   </svg>
                 </button>
-                <div className="flex items-center cursor-pointer">
-                  <Link to={`/p/${userInfo.username}`}>
-                    <img
-                      title={`${userInfo.username}`}
-                      className="rounded-full h-8 w-8 flex object-cover"
-                      src={`${userInfo.avatar}`}
-                      alt={`${userInfo.username} profile`}
-                    />
-                  </Link>
-                </div>
               </>
             ) : (
               <>

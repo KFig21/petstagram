@@ -1,31 +1,20 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import FirebaseContext from "../context/firebase";
 import UserContext from "../context/user";
 import * as ROUTES from "../constants/routes";
 import useUser from "../hooks/use-user";
 import newPostIcon from "../assets/newPost.png";
-import { useHistory } from "react-router-dom";
-import logo from "../assets/logo.png";
+import "./components.css";
 
-export default function Header() {
-  const { firebase } = useContext(FirebaseContext);
+export default function Footer() {
   const { user } = useContext(UserContext);
   const { userInfo } = useUser();
-  const history = useHistory();
 
   return (
-    <header className="h-16 bg-white border-b border-gray-primary sticky top-0 z-50">
+    <footer className="h-16 bg-white border-b border-gray-primary fixed bottom-0 z-50 w-screen">
       <div className="container mx-auto max-w-screen-lg h-full">
-        <div className="flex justify-between h-full pr-5 pl-5">
-          <div className="text-gray-700 text-center flex  items-center align-items cursor-pointer">
-            <h1 className="flex justify-center w-full">
-              <Link to={ROUTES.DASHBOARD} aria-label="instagram header">
-                <img src={logo} alt="instagram header" className="mt-2 w-28" />
-              </Link>
-            </h1>
-          </div>
-          <div className="text-gray-700 text-center flex flex-none items-center align-items">
+        <div className="flex h-full px-8">
+          <div className="text-gray-700 text-center flex justify-between w-screen items-center align-items">
             {user ? (
               <>
                 <Link
@@ -38,12 +27,12 @@ export default function Header() {
                   <img
                     src={newPostIcon}
                     alt="add post"
-                    className="w-8 mr-4 lg:mr-6 cursor-pointer"
+                    className="w-8  lg:mr-6 cursor-pointer"
                   />
                 </Link>
                 <Link to={ROUTES.DASHBOARD} aria-label="timeline">
                   <svg
-                    className="w-8 mr-4 lg:mr-6 text-black-light cursor-pointer"
+                    className="w-8  lg:mr-6 text-black-light cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -58,32 +47,7 @@ export default function Header() {
                     <title>Timeline</title>
                   </svg>
                 </Link>
-                <button
-                  type="button"
-                  title="Sign-out"
-                  onClick={() => firebase.auth().signOut()}
-                  onKeyDown={(e) => {
-                    if (e.key === "enter") {
-                      history.push("/login");
-                      firebase.auth().signOut();
-                    }
-                  }}
-                >
-                  <svg
-                    className="w-8 mr-4 lg:mr-6 text-black-light cursor-pointer"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                    />
-                  </svg>
-                </button>
+
                 <div className="flex items-center cursor-pointer">
                   <Link to={`/p/${userInfo.username}`}>
                     <img
@@ -118,6 +82,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </footer>
   );
 }

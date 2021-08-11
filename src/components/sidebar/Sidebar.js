@@ -13,8 +13,8 @@ export default function Sidebar() {
   // } = useUser();
 
   return (
-    <div className="p-4 relative">
-      <div className="fixed">
+    <div className="p-4 flex justify-center col-span-2 lg:block lg:col-span-1 lg:relative">
+      <div className="flex flex-col lg:fixed">
         <User
           username={userInfo.username}
           fullName={userInfo.fullName}

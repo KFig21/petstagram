@@ -1,0 +1,19 @@
+header {
+  display: block;
+}
+
+footer,
+.mobile-header {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    display: none;
+  }
+
+  footer,
+  .mobile-header {
+    display: block;
+  }
+}

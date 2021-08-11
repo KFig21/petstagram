@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Header from "../components/Header";
+import MobileHeader from "../components/MobileHeader";
+import MobileFooter from "../components/Footer";
 import PostHeader from "../components/post/Header";
 import Actions from "../components/post/Actions";
 import Footer from "../components/post/Footer";
@@ -36,6 +38,7 @@ export default function Post() {
   return post?.docId ? (
     <div>
       <Header />
+      <MobileHeader />
       {/* desktop */}
       <div className="post-desktop">
         <div className="flex">
@@ -116,7 +119,7 @@ export default function Post() {
             page="post"
           />
         </div>
-        <div className="flex justify-center align-center my-5">
+        <div className="flex justify-center align-center mt-5 mb-24 lg:my-5">
           <button
             className="bg-blue-primary font-bold text-sm rounded text-white w-20 h-8"
             onClick={() => history.goBack()}
@@ -125,6 +128,7 @@ export default function Post() {
           </button>
         </div>
       </div>
+      <MobileFooter />
     </div>
   ) : null;
 }

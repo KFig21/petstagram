@@ -13,7 +13,7 @@ export default function Post({ content }) {
   const docId = content.docId;
 
   return (
-    <div className="rounded col-span-4 border border-gray-primary bg-white mt-4 mb-2 relative">
+    <div className="lg:rounded col-span-4 border-t border-b lg:border border-gray-primary bg-white mt-4 mb-2 relative">
       <Header
         userId={content.userId}
         docId={content.docId}
