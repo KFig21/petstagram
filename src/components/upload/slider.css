@@ -27,3 +27,15 @@
   background: #005c98;
   cursor: pointer;
 }
+
+.image-cropper {
+  position: relative;
+  height: 65vh;
+  width: 100vh;
+}
+
+@media only screen and (max-width: 1000px) {
+  .image-cropper {
+    width: 95vw;
+  }
+}

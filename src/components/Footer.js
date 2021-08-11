@@ -11,7 +11,7 @@ export default function Footer() {
   const { userInfo } = useUser();
 
   return (
-    <footer className="h-16 bg-white border-b border-gray-primary fixed bottom-0 z-50 w-screen">
+    <footer className="h-12 bg-white border-b border-gray-primary fixed bottom-0 z-50 w-screen">
       <div className="container mx-auto max-w-screen-lg h-full">
         <div className="flex h-full px-8">
           <div className="text-gray-700 text-center flex justify-between w-screen items-center align-items">

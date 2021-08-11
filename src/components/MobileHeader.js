@@ -12,7 +12,7 @@ export default function Header() {
   const history = useHistory();
 
   return (
-    <header className="h-16 bg-white border-b border-gray-primary sticky top-0 z-50 mobile-header relative">
+    <header className="h-12 bg-white border-b border-gray-primary sticky top-0 z-50 mobile-header relative">
       <div className="container mx-auto max-w-screen-lg h-full">
         <div className="flex justify-end h-full pr-5 pl-5">
           <div className="text-gray-700 text-center flex  items-center align-items cursor-pointer absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
