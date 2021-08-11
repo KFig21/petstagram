@@ -8,9 +8,9 @@ export default function Dashboard() {
     document.title = "instagram";
   }, []);
   return (
-    <div className="bg-brown-light">
+    <div className="bg-brown-light ">
       <Header />
-      <div className="grid grid-cols-3 gap-4 justify between mx-auto max-w-screen-md">
+      <div className="grid sm:grid-cols-2 2xl:grid-cols-3 gap-4 justify between mx-auto max-w-screen-md">
         <Timeline />
         <Sidebar />
       </div>

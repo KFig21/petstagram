@@ -17,19 +17,15 @@ export default function Header() {
   return (
     <header className="h-16 bg-white border-b border-gray-primary sticky top-0 z-50">
       <div className="container mx-auto max-w-screen-lg h-full">
-        <div className="flex justify-between h-full">
-          <div className="text-gray-700 text-center flex items-center align-items cursor-pointer">
+        <div className="flex justify-between h-full pr-5 pl-5">
+          <div className="text-gray-700 text-center flex  items-center align-items cursor-pointer">
             <h1 className="flex justify-center w-full">
               <Link to={ROUTES.DASHBOARD} aria-label="instagram header">
-                <img
-                  src={logo}
-                  alt="instagram header"
-                  className="mt-2 w-6/12"
-                />
+                <img src={logo} alt="instagram header" className="mt-2 w-28" />
               </Link>
             </h1>
           </div>
-          <div className="text-gray-700 text-center flex items-center align-items">
+          <div className="text-gray-700 text-center flex flex-none items-center align-items">
             {user ? (
               <>
                 <Link
