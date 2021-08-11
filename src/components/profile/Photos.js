@@ -9,7 +9,126 @@ export default function Photos({ photos }) {
       <div className="grid grid-cols-3 gap-1 lg:gap-8 mt-0 lg:mt-4 mb-12">
         {!photos ? (
           <>
-            <Skeleton count={12} width={320} height={400} />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
+            <Skeleton
+              count={1}
+              width={`30vw`}
+              height={`30vw`}
+              style={{
+                maxHeight: "320px",
+                maxWidth: "320px",
+                borderRadius: "0px",
+              }}
+            />
           </>
         ) : photos.length > 0 ? (
           photos.map((photo) => (
