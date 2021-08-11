@@ -59,12 +59,12 @@ export default function Signup() {
   return (
     <div className="container flex mx-auto max-w-screen-md items-center h-screen">
       {/* left side */}
-      <div className="flex w-1/2 justify-end">
+      <div className="hidden lg:flex w-1/2 justify-end">
         {/* iphone image */}
         <img src={iPhonePic} className="max-h-96" alt="iphone with ig app" />
       </div>
       {/* right side */}
-      <div className="flex flex-col w-1/2">
+      <div className="flex flex-col p-3 lg:p-0 lg:w-1/2">
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4">
           {/* logo header */}
           <h1 className="flex justify-center w-full">

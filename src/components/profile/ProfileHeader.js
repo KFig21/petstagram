@@ -106,13 +106,13 @@ export default function ProfileHeader({
           </button>
         )}
       </div>
-      <div className="container flex justify-center relative group w-40 m-auto">
+      <div className="container flex justify-center relative group h-28 w-28 lg:h-40 lg:w-40 m-auto ml-3 lg:ml-0">
         <img
           src={avatar}
-          className="rounded-full h-40 w-40 flex object-cover"
+          className="rounded-full h-28 w-28 lg:h-40 lg:w-40 flex object-cover"
           alt={`${profileUsername} avi`}
         />
-        {/* if logged in user is on thei own profile and hovers over their avi, add the ability to change avi */}
+        {/* if logged in user is on their own profile and hovers over their avi, add the ability to change avi */}
         {loggedInUsersProfile && (
           <Link
             to={{
@@ -122,11 +122,11 @@ export default function ProfileHeader({
             aria-label="upload post"
             className="absolute justify-center"
           >
-            <div className=" bottom-0 bg-gray-200 z-10 w-40 justify-evenly items-center h-40 bg-black-faded group-hover:flex hidden rounded-full">
+            <div className=" bottom-0 bg-gray-200 z-10 justify-evenly items-center h-28 w-28 lg:h-40 lg:w-40 bg-black-faded group-hover:flex hidden rounded-full">
               <img
                 src={plusSign}
                 alt="plus"
-                className="flex items-center h-20 w-20 opacity-60 cursor-pointer"
+                className="flex items-center h-16 w-16 lg:h-20 lg:w-20 opacity-60 cursor-pointer"
               />
             </div>
           </Link>
@@ -150,27 +150,43 @@ export default function ProfileHeader({
             </button>
           )}
         </div>
-        <div className="container flex mt-4">
+        <div className="container flex mt-2 lg:mt-4">
           {followers === undefined || following === undefined ? (
             <Skeleton count={1} width={677} height={24} />
           ) : (
             <>
-              <p className="mr-10 cursor-pointer" onClick={handleShowPhotos}>
-                <span className="font-bold">{photosCount}</span>
+              <p
+                className="mr-5 lg:mr-10 cursor-pointer flex flex-col items-center lg:block text-sm lg:text-base text-gray-base lg:text-black-base leading-3"
+                onClick={handleShowPhotos}
+              >
+                <span className="font-bold text-black-base text-base">
+                  {photosCount}
+                </span>
                 {` `} {photosCount === 1 ? `photo` : `photos`}
               </p>
-              <p className="mr-10 cursor-pointer" onClick={handleShowFollowers}>
-                <span className="font-bold">{followerCount}</span>
+              <p
+                className="mr-5 lg:mr-10 cursor-pointer flex flex-col items-center lg:block text-sm lg:text-base text-gray-base lg:text-black-base leading-3"
+                onClick={handleShowFollowers}
+              >
+                <span className="font-bold text-black-base text-base">
+                  {followerCount}
+                </span>
                 {` `} {followerCount === 1 ? `follower` : `followers`}
               </p>
-              <p className="mr-10 cursor-pointer" onClick={handleShowFollowing}>
-                <span className="font-bold">{following.length}</span> following
+              <p
+                className="cursor-pointer flex flex-col items-center lg:block text-sm lg:text-base text-gray-base lg:text-black-base leading-3"
+                onClick={handleShowFollowing}
+              >
+                <span className="font-bold text-black-base text-base ">
+                  {following.length}
+                </span>{" "}
+                following
               </p>
             </>
           )}
         </div>
-        <div className="container mt-4">
-          <p className="font-medium">
+        <div className="container mt-3 lg:mt-4">
+          <p className="text-sm lg:text-base font-medium">
             {!fullName ? <Skeleton count={1} height={24} /> : fullName}
           </p>
         </div>

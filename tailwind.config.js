@@ -9,6 +9,20 @@ module.exports = {
     fill: (theme) => ({
       red: theme("colors.red.primary"),
     }),
+    theme: {
+      screens: {
+        "2xl": { max: "1535px" },
+
+        xl: { max: "1279px" },
+
+        lg: { max: "1023px" },
+
+        md: { max: "767px" },
+
+        sm: { max: "639px" },
+        // => @media (max-width: 639px) { ... }
+      },
+    },
     colors: {
       white: "#ffffff",
       blue: {
@@ -16,6 +30,7 @@ module.exports = {
         medium: "#005c98",
       },
       black: {
+        base: "#000000",
         light: "#262626",
         faded: "#00000059",
       },
