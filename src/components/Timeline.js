@@ -16,7 +16,9 @@ export default function Timeline() {
       ) : photos?.length > 0 ? (
         photos.map((content) => <Post key={content.docId} content={content} />)
       ) : (
-        <p className="text-center text-2xl mt-5">Follow users to see photos!</p>
+        <p className="text-center text-2xl mt-5 lg:mt-10">
+          Follow users to see photos!
+        </p>
       )}
     </div>
   );
