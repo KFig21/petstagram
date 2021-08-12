@@ -79,12 +79,12 @@ export default function ProfileHeader({
       {/* delete profile */}
       <div
         className="flex justify-center absolute h-16"
-        style={{ top: "-10px", right: "5px" }}
+        style={{ top: "-10px", right: "10px" }}
       >
         {deletePostButton && (
           <button
             onClick={handleDelete}
-            className="hover:bg-red-primary hover:text-white font-bold h-12 px-2 py-1 rounded ml-6 duration-150"
+            className="hover:bg-red-primary hover:text-white font-bold h-12 px-2 py-1 rounded mr-6 duration-150"
             title="confirm delete"
           >
             delete?
@@ -97,15 +97,17 @@ export default function ProfileHeader({
               title={deletePostButton ? "cancel delete" : "delete your profile"}
               onClick={handleX}
             >
-              <p
-                className={`font-bold text-4xl  hover:text-red-primary cursor-pointer duration-150 ${
+              <button
+                className={`relative font-bold text-4xl hover:text-red-primary mr-2 h-10 cursor-pointer duration-150 ${
                   deletePostButton
                     ? `hover:text-green-primary`
                     : `hover:text-red-primary`
                 }`}
               >
-                ×
-              </p>
+                <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  ×
+                </span>
+              </button>
             </div>
           )}
       </div>

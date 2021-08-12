@@ -58,8 +58,8 @@ export default function Header({ userId, docId, photoStorageName, page }) {
             </button>
           )}
           {userInfo.userId === postUser.userId && page === "post" && (
-            <p
-              className={`font-bold text-4xl hover:text-red-primary mb-2 cursor-pointer duration-150 ${
+            <button
+              className={`font-bold text-4xl hover:text-red-primary mb-2 h-5/6 cursor-pointer duration-150 ${
                 deletePostButton
                   ? `hover:text-green-primary`
                   : `hover:text-red-primary`
@@ -68,7 +68,7 @@ export default function Header({ userId, docId, photoStorageName, page }) {
               title={deletePostButton ? "cancel delete" : "delete your post"}
             >
               ×
-            </p>
+            </button>
           )}
         </div>
       </div>
