@@ -98,7 +98,7 @@ export default function ProfileHeader({
               onClick={handleX}
             >
               <button
-                className={`relative font-bold text-4xl hover:text-red-primary mr-2 h-10 cursor-pointer duration-150 ${
+                className={`relative font-bold text-4xl hover:text-red-primary mr-2 h-12 cursor-pointer duration-150 ${
                   deletePostButton
                     ? `hover:text-green-primary`
                     : `hover:text-red-primary`
