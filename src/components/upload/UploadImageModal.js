@@ -74,7 +74,7 @@ export default function UploadImageModal({ type }) {
               accept="image/*"
               onChange={initialUploadHandler}
             />
-            <div className="flex items-end justify-evenly bg-none font-semibold cursor-pointer outline-none p-4">
+            <div className="flex items-end justify-evenly bg-none font-semibold cursor-pointer outline-none p-4 text-center">
               Choose image to upload
             </div>
           </label>
