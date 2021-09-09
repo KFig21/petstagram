@@ -26,6 +26,19 @@ export default function Login() {
     }
   };
 
+  const handleVisitor = async () => {
+    try {
+      await firebase
+        .auth()
+        .signInWithEmailAndPassword("TestAccount@mail.com", "TestAccount");
+      history.push(ROUTES.DASHBOARD);
+    } catch (error) {
+      setEmailAddress("");
+      setPassword("");
+      setError(error.message);
+    }
+  };
+
   useEffect(() => {
     document.title = "Login - Instagram";
   }, []);
@@ -85,14 +98,15 @@ export default function Login() {
             </Link>
           </p>
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center ">
           <p className="text-xs mt-2">Wanna look around?</p>
-          <p className="text-xs mt-2">
-            email: <strong>TestAccount@mail.com</strong>,
-          </p>
-          <p className="text-xs mt-2">
-            Password: <strong>TestAccount</strong>
-          </p>
+          <button
+            type="submit"
+            className="bg-green-primary text-white w-auto px-4 rounded h-8 font-bold mt-2"
+            onClick={() => handleVisitor()}
+          >
+            Just visiting
+          </button>
         </div>
       </div>
     </div>
