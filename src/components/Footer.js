@@ -33,8 +33,8 @@ export default function Footer() {
                   <svg
                     version="1.0"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="562.000000pt"
-                    height="533.000000pt"
+                    width="32px"
+                    height="32px"
                     viewBox="0 0 562.000000 533.000000"
                     preserveAspectRatio="xMidYMid meet"
                     className="w-8 lg:mr-6 cursor-pointer"

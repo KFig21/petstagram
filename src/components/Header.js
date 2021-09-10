@@ -145,8 +145,8 @@ c-43 28 -176 67 -228 67 -44 0 -53 -4 -68 -27z m-480 -881 c15 -15 29 -42 33
                     className="w-8 mr-4 lg:mr-6 cursor-pointer"
                     version="1.0"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="562.000000pt"
-                    height="533.000000pt"
+                    width="32px"
+                    height="32px"
                     viewBox="0 0 562.000000 533.000000"
                     preserveAspectRatio="xMidYMid meet"
                   >
