@@ -150,6 +150,8 @@ export async function getPhotos(userId, following, username) {
     ...userPhotosWithUserDetails,
   ];
 
+  photosWithUserDetails.sort((a, b) => b.dateCreated - a.dateCreated);
+
   return photosWithUserDetails;
 }
 
