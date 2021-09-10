@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import Comments from "./Comments";
 import { Link } from "react-router-dom";
 
-export default function Post({ content }) {
+export default function Post({ content, timeline }) {
   const commentInput = useRef(null);
   const handleFocus = () => commentInput.current.focus();
   const docId = content.docId;
@@ -19,6 +19,7 @@ export default function Post({ content }) {
         docId={content.docId}
         photoStorageName={content.photoStorageName}
         page="post"
+        timeline={timeline}
       />
       <Link to={`/post/${docId}`}>
         <Image src={content.imageSrc} caption={content.caption} />

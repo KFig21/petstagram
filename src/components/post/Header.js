@@ -6,7 +6,13 @@ import * as ROUTES from "../../constants/routes";
 import { useHistory } from "react-router-dom";
 import useUser from "../../hooks/use-user";
 
-export default function Header({ userId, docId, photoStorageName, page }) {
+export default function Header({
+  userId,
+  docId,
+  photoStorageName,
+  page,
+  timeline,
+}) {
   const [postUser, setPostUser] = useState("");
   const [deletePostButton, setDeletePostButton] = useState(false);
   const { userInfo } = useUser();
@@ -57,21 +63,23 @@ export default function Header({ userId, docId, photoStorageName, page }) {
               delete?
             </button>
           )}
-          {userInfo.userId === postUser.userId && page === "post" && (
-            <button
-              className={`relative font-bold text-4xl hover:text-red-primary mr-2 h-12 cursor-pointer duration-150 ${
-                deletePostButton
-                  ? `hover:text-green-primary`
-                  : `hover:text-red-primary`
-              }`}
-              onClick={handleX}
-              title={deletePostButton ? "cancel delete" : "delete your post"}
-            >
-              <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                ×
-              </span>
-            </button>
-          )}
+          {userInfo.userId === postUser.userId &&
+            page === "post" &&
+            timeline !== true && (
+              <button
+                className={`relative font-bold text-4xl hover:text-red-primary mr-2 h-12 cursor-pointer duration-150 ${
+                  deletePostButton
+                    ? `hover:text-green-primary`
+                    : `hover:text-red-primary`
+                }`}
+                onClick={handleX}
+                title={deletePostButton ? "cancel delete" : "delete your post"}
+              >
+                <span className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  ×
+                </span>
+              </button>
+            )}
         </div>
       </div>
     </div>

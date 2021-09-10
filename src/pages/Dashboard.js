@@ -7,7 +7,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 
 export default function Dashboard() {
   useEffect(() => {
-    document.title = "instagram";
+    document.title = "Petstagram";
   }, []);
   return (
     <div className="bg-gray-background ">

@@ -5,7 +5,7 @@ import * as ROUTES from "../constants/routes";
 
 export default function NotFound({ user }) {
   useEffect(() => {
-    document.title = "Not Found! - Instagram";
+    document.title = "Not Found! - Petstagram";
   }, []);
   return (
     <div>

@@ -14,9 +14,10 @@ export default function FinalizePost({
 }) {
   const [caption, setCaption] = useState("");
   const [posted, setPosted] = useState(false);
-
   const { userInfo } = useUser();
   const { user } = useAuthListener();
+  const [buttonAndPage, setbuttonAndPage] = useState(false);
+  const isInvalid = buttonAndPage;
 
   const handleInput = (e) => {
     const formValue = e.currentTarget.value;
@@ -26,6 +27,7 @@ export default function FinalizePost({
   };
 
   const handlePost = () => {
+    setbuttonAndPage(true);
     submitPost(userInfo, selectedImage, caption, fileName);
     setTimeout(function () {
       setPosted(true);
@@ -41,7 +43,7 @@ export default function FinalizePost({
 
   return (
     <div className="flex flex-col items-center w-full lg:h-full justify-center ">
-      {userInfo.username === user.displayName && (
+      {!buttonAndPage && userInfo.username === user.displayName && (
         <>
           <div className="rounded col-span-4 border border-gray-primary bg-white mt-24 mb-32 lg:my-auto">
             <Header userId={userInfo.userId} page="edit" />
@@ -73,7 +75,10 @@ export default function FinalizePost({
                 Back
               </button>
               <button
-                className="bg-blue-primary font-bold text-sm rounded text-white w-20 h-8"
+                disabled={isInvalid}
+                className={`bg-blue-primary font-bold text-sm rounded text-white w-20 h-8  ${
+                  isInvalid && "opacity-50"
+                }`}
                 onClick={type === "post" ? handlePost : handleAvi}
               >
                 {type === "post" ? "Post" : "Confirm"}

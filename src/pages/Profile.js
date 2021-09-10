@@ -13,7 +13,7 @@ export default function Profile() {
   const history = useHistory();
 
   useEffect(() => {
-    document.title = `${username} - Instagram`;
+    document.title = `${username} - Petstagram`;
     async function checkUserExists() {
       const [doesUserExist] = await getUserByUsername(username);
       if (doesUserExist.userId) {

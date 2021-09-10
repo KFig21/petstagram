@@ -53,7 +53,7 @@ export default function Signup() {
   };
 
   useEffect(() => {
-    document.title = "Sign-up - Instagram";
+    document.title = "Sign-up - Petstagram";
   }, []);
 
   return (
