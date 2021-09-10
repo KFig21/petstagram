@@ -1,75 +1,15 @@
-import React, { useState, useContext, useEffect } from "react";
-import { useHistory, Link } from "react-router-dom";
-import FirebaseContext from "../context/firebase";
-import * as ROUTES from "../constants/routes";
-import iPhonePic from "../assets/iphone-with-pets.png";
-// import logo from "../assets/logo.png";
-
-export default function Login() {
-  const history = useHistory();
-  const { firebase } = useContext(FirebaseContext);
-  const [emailAddress, setEmailAddress] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const isInvalid = password === "" || emailAddress === "";
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
-    try {
-      await firebase.auth().signInWithEmailAndPassword(emailAddress, password);
-      history.push(ROUTES.DASHBOARD);
-    } catch (error) {
-      setEmailAddress("");
-      setPassword("");
-      setError(error.message);
-    }
-  };
-
-  const handleVisitor = async () => {
-    try {
-      await firebase
-        .auth()
-        .signInWithEmailAndPassword("TestAccount@mail.com", "TestAccount");
-      history.push(ROUTES.DASHBOARD);
-    } catch (error) {
-      setEmailAddress("");
-      setPassword("");
-      setError(error.message);
-    }
-  };
-
-  useEffect(() => {
-    document.title = "Login - Instagram";
-  }, []);
-
-  return (
-    <div className="container flex mx-auto max-w-screen-md items-center h-screen">
-      {/* left side */}
-      <div className="hidden lg:flex w-1/2 justify-end">
-        {/* iphone image */}
-        <img src={iPhonePic} className="max-h-96" alt="iphone with ig app" />
-      </div>
-      {/* right side */}
-      <div className="flex flex-col p-3 lg:p-0 lg:w-1/2">
-        <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4">
-          {/* logo header */}
-          <h1 className="flex justify-center w-full">
-            {/* <img src={logo} alt="igLogo" className="mt-2 w-6/12 mb-4" /> */}
-            <svg
-              version="1.0"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1250.000000 350.000000"
-              preserveAspectRatio="xMidYMid meet"
-              className="mt-2 w-6/12 mb-4"
-            >
-              <g
-                transform="translate(0.000000,350.000000) scale(0.100000,-0.100000)"
-                fill="#231F20"
-                stroke="none"
-              >
-                <path
-                  d="M774 3359 c-303 -50 -550 -278 -660 -606 -35 -106 -45 -299 -19 -389
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1250.000000pt" height="350.000000pt" viewBox="0 0 1250.000000 350.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.16, written by Peter Selinger 2001-2019
+</metadata>
+<g transform="translate(0.000000,350.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M774 3359 c-303 -50 -550 -278 -660 -606 -35 -106 -45 -299 -19 -389
 25 -89 62 -149 130 -213 71 -65 143 -104 189 -99 46 4 46 41 2 120 -50 90 -66
 163 -67 299 0 139 13 218 53 320 36 93 85 158 163 221 61 49 80 57 86 36 2 -7
 1 -413 -2 -903 -6 -987 -3 -941 -74 -1090 -19 -39 -35 -86 -35 -104 0 -30 1
@@ -77,10 +17,8 @@ export default function Login() {
 373 111 503 204 129 91 231 240 269 389 20 78 20 269 -1 355 -61 261 -288 454
 -604 514 -90 17 -356 20 -446 5z m431 -245 c155 -40 273 -167 314 -338 15 -63
 15 -205 0 -276 -29 -138 -123 -266 -238 -324 -110 -56 -275 -83 -302 -49 -11
-13 -15 109 -17 510 l-3 493 94 0 c52 0 119 -7 152 -16z"
-                />
-                <path
-                  d="M2933 3313 c-15 -23 -19 -56 -21 -226 l-4 -199 -163 7 -163 7 -18
+13 -15 109 -17 510 l-3 493 94 0 c52 0 119 -7 152 -16z"/>
+<path d="M2933 3313 c-15 -23 -19 -56 -21 -226 l-4 -199 -163 7 -163 7 -18
 -28 c-22 -33 -32 -151 -15 -183 11 -20 19 -21 178 -21 l166 0 -7 -392 c-8
 -435 -1 -390 -88 -536 -119 -198 -250 -311 -397 -343 -130 -28 -237 73 -277
 260 -18 88 -18 101 5 101 39 0 208 62 278 102 39 22 98 67 131 100 101 101
@@ -153,63 +91,6 @@ c-43 28 -176 67 -228 67 -44 0 -53 -4 -68 -27z m-480 -881 c15 -15 29 -42 33
 -318 -209 -345 -70 -19 -97 -13 -135 29 -74 82 -103 227 -94 475 10 284 60
 427 172 497 40 25 120 25 162 0z m-2200 -1538 c-9 -286 -31 -385 -102 -462
 -47 -51 -91 -71 -152 -71 -53 0 -88 18 -124 63 -50 65 2 231 121 389 50 66
-246 278 258 278 2 0 2 -89 -1 -197z"
-                />
-              </g>
-            </svg>
-          </h1>
-          {/* error message */}
-          {error && <p className="mb-4 text-xs text-red-primary">{error}</p>}
-          {/* form */}
-          <form onSubmit={handleLogin} method="POST">
-            {/* email */}
-            <input
-              aria-label="Enter your email address"
-              type="test"
-              placeholder="Email address"
-              className="test-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-primary rounded mb-2"
-              onChange={({ target }) => setEmailAddress(target.value)}
-            />
-            {/* password */}
-            <input
-              aria-label="Enter your password"
-              type="password"
-              placeholder="Password"
-              className="test-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-primary rounded mb-2"
-              onChange={({ target }) => setPassword(target.value)}
-            />
-            {/* login button */}
-            <button
-              disabled={isInvalid}
-              type="submit"
-              className={`bg-blue-primary text-white w-full rounded h-8 font-bold ${
-                isInvalid && "opacity-50"
-              }`}
-            >
-              Login
-            </button>
-          </form>
-        </div>
-        {/* switch to signup page */}
-        <div className="flex justify-center items-center flex-col w-full bg-white p-4 border border-gray-primary">
-          <p className="text-sm">
-            Don't have an account?{` `}
-            <Link to={ROUTES.SIGN_UP} className="font-bold text-blue-primary">
-              Sign-up
-            </Link>
-          </p>
-        </div>
-        <div className="flex flex-col justify-center items-center ">
-          <p className="text-xs mt-2">Wanna look around?</p>
-          <button
-            type="submit"
-            className="bg-green-primary text-white w-auto px-4 rounded h-8 font-bold mt-2"
-            onClick={() => handleVisitor()}
-          >
-            Just visiting
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
+246 278 258 278 2 0 2 -89 -1 -197z"/>
+</g>
+</svg>
