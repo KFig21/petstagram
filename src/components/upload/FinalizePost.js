@@ -23,6 +23,8 @@ export default function FinalizePost({
     const formValue = e.currentTarget.value;
     if (formValue.length < 2200) {
       setCaption(formValue);
+    } else if (formValue.length === 0) {
+      setCaption("😸🐶🐷");
     }
   };
 
