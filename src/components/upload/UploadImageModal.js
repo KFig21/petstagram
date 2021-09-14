@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ImageCropper from "./ImageCropper";
 import FinalizePost from "./FinalizePost";
+import loadingIcon from "../../assets/loadingIcon.png";
 
 export default function UploadImageModal({ type }) {
   const [selectedImage, setSelectedImage] = useState("");
@@ -145,9 +146,12 @@ m-2464 -1395 c153 -71 320 -273 461 -555 72 -146 94 -226 94 -353 0 -198 -69
           />
         </div>
       )}
-      <p className="absolute" style={{ zIndex: "1" }}>
-        loading... (possibly)
-      </p>
+      <img
+        className="absolute w-48"
+        src={loadingIcon}
+        style={{ zIndex: "1" }}
+        alt="loading..."
+      />
     </div>
   );
 }
