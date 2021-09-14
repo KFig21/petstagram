@@ -3,7 +3,7 @@
 <p><a href="https://kfig21.github.io/instagram_clone/" target="_blank" rel="noopener noreferrer">View the project here!</a> 👀</p>
 
 <h3>Summary</h3>
-<p>- This was the final project for The Odin Project JavaScript curriculum. The goal of the project is to build/re-create a functional social media platform with a backend. This project is closely modeled after instagram, it was made with the React JS Library, Tailwind CSS, and Firebase.</p>
+<p>This was the final project for The Odin Project JavaScript curriculum. The goal of the project is to build/re-create a functional social media platform with a backend. This project is closely modeled after instagram, it was made with the React JS Library, Tailwind CSS, and Firebase.</p>
 
 <h3>Demo GIF</h3>
 
