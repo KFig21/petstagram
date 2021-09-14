@@ -6,6 +6,7 @@
 <p>- This was the final project for The Odin Project JavaScript curriculum. The goal of the project is to build/re-create a functional social media platform with a backend. This project is closely modeled after instagram, it was made with the React JS Library, Tailwind CSS, and Firebase.</p>
 
 <h3>Demo GIF</h3>
+
 ![](readmeGIF.gif)
 
  <h3>Features:</h3>
