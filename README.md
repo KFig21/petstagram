@@ -7,12 +7,14 @@
 
  <h3>Features:</h3>
  <ul>
+  <li>Responsive design</li>
   <li>Create a profile</li>
   <li>Signup/Login/Logout authentication</li>
   <li>Upload a profile picture, with the ability to crop</li>
   <li>Post a picture, with the ability to crop</li>
   <li>Like/Unlike pictures</li>
   <li>Comment on pictures</li>
+  <li>Likes and comments update in realtime</li>
   <li>Follow/Unfollow other users</li>
   <li>Delete pictures posted</li>
   <li>Delete comments posted</li>
@@ -28,7 +30,6 @@
 
 <h3> Things I need guidance with: </h3>
 
-- Responsive Design
 - More experience with Tailwind
 - Pagination
 
