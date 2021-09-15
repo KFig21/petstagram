@@ -23,7 +23,9 @@
  
 <h3>Demo GIF</h3>
 
-![](readmeGIF.gif)
+<h4>Desktop</h4>
+
+![](demo.gif)
 
 
 
