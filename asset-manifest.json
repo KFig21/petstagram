@@ -10,8 +10,8 @@
     "static/js/3.d2e26dc9.chunk.js": "/petstagram/static/js/3.d2e26dc9.chunk.js",
     "static/js/3.d2e26dc9.chunk.js.map": "/petstagram/static/js/3.d2e26dc9.chunk.js.map",
     "main.css": "/petstagram/static/css/main.946a0ae7.chunk.css",
-    "main.js": "/petstagram/static/js/main.e73e0bda.chunk.js",
-    "main.js.map": "/petstagram/static/js/main.e73e0bda.chunk.js.map",
+    "main.js": "/petstagram/static/js/main.1bf367cb.chunk.js",
+    "main.js.map": "/petstagram/static/js/main.1bf367cb.chunk.js.map",
     "runtime-main.js": "/petstagram/static/js/runtime-main.7d1908ca.js",
     "runtime-main.js.map": "/petstagram/static/js/runtime-main.7d1908ca.js.map",
     "static/js/6.57ae888a.chunk.js": "/petstagram/static/js/6.57ae888a.chunk.js",
@@ -51,6 +51,6 @@
     "static/js/runtime-main.7d1908ca.js",
     "static/js/6.57ae888a.chunk.js",
     "static/css/main.946a0ae7.chunk.css",
-    "static/js/main.e73e0bda.chunk.js"
+    "static/js/main.1bf367cb.chunk.js"
   ]
 }
