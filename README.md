@@ -1,6 +1,6 @@
-# Petstagram 
+# Petstagram
 
-<p><a href="https://kfig21.github.io/instagram_clone/" target="_blank" rel="noopener noreferrer">View the project here!</a> 👀</p>
+<p><a href="https://kfig21.github.io/petstagram/" target="_blank" rel="noopener noreferrer">View the project here!</a> 👀</p>
 
 <h3>Summary</h3>
 <p>This was the final project for The Odin Project JavaScript curriculum. The goal of the project is to build/re-create a functional social media platform with a backend. This project is closely modeled after instagram, it was made with the React JS Library, Tailwind CSS, and Firebase.</p>
@@ -31,6 +31,6 @@
 
 <img src="demoMobile.gif" width="250"/>
 
------------------------------
+---
 
 <h3>Thanks for checking out my project! Any && all feedback is appreciated!</h3>
