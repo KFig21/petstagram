@@ -29,7 +29,7 @@
 
 <h4>Mobile</h4>
 
-![](demoMobile.gif)
+<img src="demoMobile.gif" width="250"/>
 
 -----------------------------
 
