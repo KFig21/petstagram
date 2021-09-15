@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import * as ROUTES from "./constants/routes";
 import useAuthListener from "./hooks/use-auth-listener";
 import UserContext from "./context/user";
+import loadingIcon from "./assets/loadingIcon.png";
 
 import ProtectedRoute from "./helpers/ProtectedRoute";
 import IsUserLoggedIn from "./helpers/IsUserLoggedIn";
@@ -20,7 +21,16 @@ function App() {
   return (
     <UserContext.Provider value={{ user }}>
       <Router basename="/instagram_clone">
-        <Suspense fallback={<p>loading...</p>}>
+        <Suspense
+          fallback={
+            <img
+              className="absolute w-48"
+              src={loadingIcon}
+              style={{ zIndex: "1" }}
+              alt="loading..."
+            />
+          }
+        >
           <Switch>
             {/* login */}
             <IsUserLoggedIn
