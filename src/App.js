@@ -23,9 +23,9 @@ function App() {
       <Router basename="/instagram_clone">
         <Suspense
           fallback={
-            <div className="relative w-screen h-screen">
+            <div className="flex items-center justify-center relative w-screen h-screen">
               <img
-                className="absolute w-48"
+                className="w-48"
                 src={loadingIcon}
                 style={{ zIndex: "1" }}
                 alt="loading..."
