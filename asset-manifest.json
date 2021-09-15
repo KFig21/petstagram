@@ -10,8 +10,8 @@
     "static/js/3.58bf218e.chunk.js": "/instagram_clone/static/js/3.58bf218e.chunk.js",
     "static/js/3.58bf218e.chunk.js.map": "/instagram_clone/static/js/3.58bf218e.chunk.js.map",
     "main.css": "/instagram_clone/static/css/main.946a0ae7.chunk.css",
-    "main.js": "/instagram_clone/static/js/main.c32b1f7d.chunk.js",
-    "main.js.map": "/instagram_clone/static/js/main.c32b1f7d.chunk.js.map",
+    "main.js": "/instagram_clone/static/js/main.4dba99bc.chunk.js",
+    "main.js.map": "/instagram_clone/static/js/main.4dba99bc.chunk.js.map",
     "runtime-main.js": "/instagram_clone/static/js/runtime-main.6ee463b1.js",
     "runtime-main.js.map": "/instagram_clone/static/js/runtime-main.6ee463b1.js.map",
     "static/js/6.f3a9461f.chunk.js": "/instagram_clone/static/js/6.f3a9461f.chunk.js",
@@ -51,6 +51,6 @@
     "static/js/runtime-main.6ee463b1.js",
     "static/js/6.f3a9461f.chunk.js",
     "static/css/main.946a0ae7.chunk.css",
-    "static/js/main.c32b1f7d.chunk.js"
+    "static/js/main.4dba99bc.chunk.js"
   ]
 }
