@@ -23,12 +23,14 @@ function App() {
       <Router basename="/instagram_clone">
         <Suspense
           fallback={
-            <img
-              className="absolute w-48"
-              src={loadingIcon}
-              style={{ zIndex: "1" }}
-              alt="loading..."
-            />
+            <div className="relative w-screen h-screen">
+              <img
+                className="absolute w-48"
+                src={loadingIcon}
+                style={{ zIndex: "1" }}
+                alt="loading..."
+              />
+            </div>
           }
         >
           <Switch>
