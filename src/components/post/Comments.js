@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { formatDistance } from "date-fns";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import AddComment from "./AddComment";
 import useUser from "../../hooks/use-user";
 import { deleteCommentByCommentId } from "../../services/firebase";
@@ -17,6 +17,7 @@ export default function Comments({
   const { userInfo } = useUser();
   const [deletePostButton, setDeletePostButton] = useState(false);
   const [commentToDelete, setCommentToDelete] = useState("");
+  const history = useHistory();
   let maxComments = 3;
   if (page === "post") {
     maxComments = comments.length;
@@ -33,7 +34,12 @@ export default function Comments({
     deleteCommentByCommentId(docId, allComments, commentToDelete, userInfo);
     setDeletePostButton(!deletePostButton);
     setTimeout(function () {
-      window.location.reload();
+      if (page === "timeline") {
+        window.location.reload();
+      }
+      if (page === "post") {
+        history.push("/");
+      }
     }, 500);
   }
 
