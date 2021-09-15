@@ -20,7 +20,7 @@ function App() {
   const { user } = useAuthListener();
   return (
     <UserContext.Provider value={{ user }}>
-      <Router basename="/instagram_clone">
+      <Router basename="/petstagram">
         <Suspense
           fallback={
             <div className="flex items-center justify-center relative w-screen h-screen">
