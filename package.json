@@ -1,6 +1,6 @@
 {
-  "homepage": "http://kfig21.github.io/instagram_clone",
-  "name": "instagram_clone",
+  "homepage": "http://kfig21.github.io/petstagram",
+  "name": "petstagram",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
