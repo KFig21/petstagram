@@ -17,7 +17,9 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      await firebase.auth().signInWithEmailAndPassword(emailAddress, password);
+      await firebase
+        .auth()
+        .signInWithEmailAndPassword(emailAddress.trim(), password);
       history.push(ROUTES.DASHBOARD);
     } catch (error) {
       setEmailAddress("");
