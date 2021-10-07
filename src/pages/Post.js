@@ -100,7 +100,7 @@ export default function Post() {
             <img
               src={post.imageSrc}
               alt="post"
-              className="border-r border-gray-primary"
+              className="border-r border-gray-primary min-w-full max-w-full"
             />
           </div>
 

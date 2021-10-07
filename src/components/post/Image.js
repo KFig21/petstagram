@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function Image({ src, caption }) {
-  return <img src={src} alt={caption} />;
+  return <img className="min-w-full max-w-full" src={src} alt={caption} />;
 }
 
 Image.propTypes = {
