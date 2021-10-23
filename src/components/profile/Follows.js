@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Followers({ follows, title }) {
   return (
-    <div className="flex flex-col justify-center m-auto items-center">
+    <div className="flex flex-col justify-center m-auto items-center mb-20">
       <p className="text-center text-2xl m-3">{title}</p>
       {!follows ? (
         <>
