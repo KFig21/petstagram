@@ -97,19 +97,52 @@ export async function updateFollowedUserFollowers(
 
 export async function getPhotos(userId, following, username) {
   // get photos of following
-  const fetchFollowingPhotos = await firebase
-    .firestore()
-    .collection("photos")
-    .where("userId", "in", following)
-    .get();
+  const fetchFollowingPhotos = await new Promise((res) => {
+    let batches = [];
 
-  const userFollowedPhotos = fetchFollowingPhotos.docs.map((photo) => ({
-    ...photo.data(),
-    docId: photo.id,
-  }));
+    while (following.length) {
+      const collectionPath = firebase.firestore().collection("photos");
+      // firestore limits batches to 10
+      const batch = following.splice(0, 10);
+
+      // add the batch request to to a queue
+      batches.push(
+        new Promise((response) => {
+          collectionPath
+            .where("userId", "in", [...batch])
+            .get()
+            .then((results) =>
+              response(
+                results.docs.map((result) => ({
+                  ...result.data(),
+                  docId: result.id,
+                }))
+              )
+            );
+        })
+      );
+    }
+    Promise.all(batches).then((content) => {
+      console.log(content);
+      res(content.flat());
+    });
+  });
+
+  // only works with 10 or less
+
+  // const fetchFollowingPhotos = await firebase
+  //   .firestore()
+  //   .collection("photos")
+  //   .where("userId", "in", following)
+  //   .get();
+
+  // const userFollowedPhotos = await fetchFollowingPhotos.docs.map((photo) => ({
+  //   ...photo.data(),
+  //   docId: photo.id,
+  // }));
 
   const userFollowedPhotosWithUserDetails = await Promise.all(
-    userFollowedPhotos.map(async (photo) => {
+    await fetchFollowingPhotos.map(async (photo) => {
       let userLikedPhoto = false;
       if (photo.likes.includes(userId)) {
         userLikedPhoto = true;
@@ -157,17 +190,45 @@ export async function getPhotos(userId, following, username) {
 
 export async function getFollowingOrFollowers(users) {
   // get users
-  const fetchFollowing = await firebase
-    .firestore()
-    .collection("users")
-    .where("userId", "in", users)
-    .get();
+  if (users.length <= 10) {
+    const fetchFollowing = await firebase
+      .firestore()
+      .collection("users")
+      .where("userId", "in", users)
+      .get();
 
-  const followingResults = fetchFollowing.docs.map((user) => ({
-    ...user.data(),
-  }));
+    const followingResults = fetchFollowing.docs.map((user) => ({
+      ...user.data(),
+    }));
 
-  return followingResults;
+    return followingResults;
+  } else {
+    return new Promise((res) => {
+      let batches = [];
+
+      while (users.length) {
+        const collectionPath = firebase.firestore().collection("users");
+        // firestore limits batches to 10
+        const batch = users.splice(0, 10);
+
+        // add the batch request to to a queue
+        batches.push(
+          new Promise((response) => {
+            collectionPath
+              .where("userId", "in", [...batch])
+              .get()
+              .then((results) =>
+                response(results.docs.map((result) => ({ ...result.data() })))
+              );
+          })
+        );
+      }
+
+      Promise.all(batches).then((content) => {
+        res(content.flat());
+      });
+    });
+  }
 }
 
 export async function getUserPhotosByUsername(username) {
