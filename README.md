@@ -3,7 +3,7 @@
 <p><a href="https://kfig21.github.io/petstagram/" target="_blank" rel="noopener noreferrer">View the project here!</a> 👀</p>
 
 <h3>Summary</h3>
-<p>This was the final project for The Odin Project JavaScript curriculum. The goal of the project is to build/re-create a functional social media platform with a backend. This project is closely modeled after instagram, it was made with the React JS Library, Tailwind CSS, and Firebase.</p>
+<p>This was the final project for <a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs/lessons/javascript-final-project" target="_blank" rel="noopener noreferrer">The Odin Project's</a> JavaScript curriculum. The goal of the project is to build/re-create a functional social media platform with a backend. This project is closely modeled after instagram, it was made with the React JS Library, Tailwind CSS, and Firebase.</p>
 
  <h3>Features:</h3>
  <ul>
